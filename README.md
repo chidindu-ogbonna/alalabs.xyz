@@ -1,1 +1,1 @@
-# teachai.app
+# Ala Labs
