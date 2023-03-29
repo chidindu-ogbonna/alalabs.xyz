@@ -4,6 +4,7 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "react/no-unescaped-entities": 2
+    "react/no-unescaped-entities": 2,
+    "prettier/prettier": 1
   }
 }
