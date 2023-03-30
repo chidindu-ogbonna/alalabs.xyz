@@ -10,35 +10,14 @@ const navigation = [
 
 export default function Header({ className }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isFixed, setIsFixed] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 0) {
-        setIsFixed(true)
-      } else {
-        setIsFixed(false)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
     <header
       id="header"
-      className={`${className} bg-gray-800 text-white ${
-        isFixed
-          ? 'top-0 left-0 z-50 w-full rounded-none bg-opacity-95'
-          : 'rounded-xl'
-      }`}
-      style={{
-        position: isFixed ? 'fixed' : 'static',
-        transition: 'position 0.2s ease-in-out',
-      }}
+      className={`${className} fixed top-0 left-0 right-0 z-40 w-full text-white`}
     >
       <nav
-        className="mx-auto flex items-center justify-between p-6 text-lg lg:px-10"
+        className="mx-4 flex items-center justify-between rounded-xl bg-zinc-800 bg-opacity-90 p-6 text-lg lg:px-10"
         aria-label="Global"
       >
         <div className="flex items-center">
@@ -48,7 +27,7 @@ export default function Header({ className }) {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-200"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -69,8 +48,8 @@ export default function Header({ className }) {
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-50" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-zinc-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10">
           <div className="flex items-center justify-between">
             <div></div>
             <button
@@ -89,7 +68,8 @@ export default function Header({ className }) {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg p-4 text-2xl leading-7 text-gray-200 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg p-4 text-2xl leading-7 text-zinc-200 hover:bg-zinc-600"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
                   </a>

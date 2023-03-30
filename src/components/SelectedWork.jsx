@@ -36,10 +36,10 @@ export default function SelectedWork({ className }) {
       {works.map((work, index) => (
         <li
           key={index}
-          className="col-span-1 flex flex-col rounded-xl bg-gray-800 p-8 text-center text-white shadow"
+          className="col-span-1 flex flex-col rounded-xl bg-zinc-800 p-8 text-center text-white shadow"
         >
           <div className="mb-6">
-            <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+            <div className="group aspect-h-7 aspect-w-10 block w-full overflow-hidden rounded-lg bg-zinc-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-zinc-100">
               <img
                 src={work.imageUrl}
                 alt=""
@@ -59,7 +59,7 @@ export default function SelectedWork({ className }) {
             <ul className="flex">
               {work.tags.map((tag, index) => (
                 <li className="" key={index}>
-                  <div className="mr-4 rounded-xl bg-gray-700 px-4 py-2">
+                  <div className="mr-4 rounded-xl bg-zinc-700 px-4 py-2">
                     {tag}
                   </div>
                 </li>

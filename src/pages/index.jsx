@@ -12,13 +12,13 @@ export default function Index() {
         description={'A home for professional and experimental projects'}
       />
 
-      <div className="min-h-screen bg-gray-900 p-4 text-white">
-        <Header className={'mb-6'} />
-        <Hero className={'mb-6'} />
+      <div className="min-h-screen bg-zinc-900 p-4 text-white">
+        <Header className={'mb-6 mt-5'} />
+        <Hero className={'mb-6 mt-28'} />
 
         <div
           id="works"
-          className="mb-6 rounded-xl bg-gray-800 px-6 py-3 text-lg text-white lg:px-10"
+          className="mb-6 rounded-xl bg-zinc-800 px-6 py-3 text-lg text-white lg:px-10"
         >
           Selected Work
         </div>

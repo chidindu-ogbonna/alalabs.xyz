@@ -25,12 +25,7 @@ module.exports = {
         '4xl': '2rem',
       },
       fontFamily: {
-        // sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        // display: ['Lexend', ...defaultTheme.fontFamily.sans],
         display: ['GT-Walsheim', ...defaultTheme.fontFamily.sans],
-        // display: ['Graphik', ...defaultTheme.fontFamily.sans],
-
-        // sans: ['Graphik', ...defaultTheme.fontFamily.sans],
       },
       maxWidth: {
         '2xl': '40rem',

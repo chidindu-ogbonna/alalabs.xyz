@@ -29,9 +29,14 @@ export default function Footer({ className }) {
   return (
     <footer
       id="footer"
-      className={`${className} rounded-xl bg-gray-800 bg-gradient-to-br from-black via-indigo-900 to-yellow-300 text-white sm:py-6`}
+      className={`${className} gradient-yellow rounded-xl py-6 text-white`}
     >
-      <div className="px-6 text-lg md:flex md:items-center md:justify-between lg:px-10">
+      <div className="flex items-center justify-between px-6 text-lg lg:px-10">
+        <div className="">
+          <p className="text-center text-lg leading-5">
+            &copy; Ala Labs, {getCurrentYear()}
+          </p>
+        </div>
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (
             <a key={item.name} href={item.href} className="hover:text-gray-800">
@@ -39,11 +44,6 @@ export default function Footer({ className }) {
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
-        </div>
-        <div className="mt-8 md:order-1 md:mt-0">
-          <p className="text-center text-lg leading-5">
-            &copy; Ala Labs, {getCurrentYear()}
-          </p>
         </div>
       </div>
     </footer>
