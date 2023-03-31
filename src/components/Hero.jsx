@@ -1,12 +1,12 @@
 export default function Hero({ className }) {
   return (
     <div
-      className={`${className} gradient-tricolor rounded-xl text-white sm:py-20`}
+      className={`${className} gradient-tricolor rounded-xl pb-28 text-white sm:pt-4`}
     >
       <div className="px-6 py-4 text-lg lg:px-10 ">
-        <div className="text-2xl tracking-tight text-white sm:text-6xl lg:text-4xl">
-          <p className="mb-2">Hi...</p>
-          <p className="mb-2">
+        <div className="text-3xl tracking-tight text-white sm:text-7xl">
+          <p className="mb-3">Hi...</p>
+          <p className="mb-3">
             This is a home for professional and experimental projects.
           </p>
           <p>
